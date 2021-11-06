@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&display=swap');
+
+/* root color */
+:root {
+    --main-color: #000000;
+    --bg-color: #202020;
+    --main-color2: #ffff;
+    --bg-color2: #f4f4f5;
+    --main-color3: #0066ff;
+    --main-color4: #1975ff;
+    --bg-label: #272937;
+    --box-shadow: 0 .1rem .1rem rgba(0,0,0, .1);
+    --box-shadow2: 0 .5rem 1rem rgba(0,0,0,.1);
+    --main-color5 : #f0f0f1;
+    --safety-color: #48b527;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'satoshi', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    transition: all .2s linear;
+}
+
+section {
+    padding: 1rem 5%;
+}
+
+.btn {
+    background: var(--main-color3);
+    padding: 10px 20px;
+    display: inline-block;
+    color: var(--main-color2);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--main-color3);
+    transition: 0.2s;
+}
+.btn:hover, .btn-subscribe:hover {
+    opacity: 0.7;
+}
+.btn2 {
+    background: var(--main-color2);
+    padding: 10px 20px;
+    display: inline-block;
+    color: var(--main-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px inset var(--main-color);
+    transition: 0.2s;
+}
+.btn2:hover {
+    color: var(--main-color3);
+    border-color: var(--main-color3);
+}
+.btn3 {
+    background: var(--main-color);
+    padding: 10px 20px;
+    display: inline-block;
+    color: var(--bg-color2);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px inset var(--main-color);
+    transition: 0.2s;
+    margin-top: 1rem;
+}
+.btn3:hover {
+    opacity: 0.7;
+}
+
+.btn i, .btn2 i, .btn3 i {
+    padding: 0 .3rem;
+}
+.up {
+    transform: rotate(45deg);
+}
+
+/* header */
+.header {
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: var(--main-color2);
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+.header .container .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.header .navbar a{
+    font-size: 1rem;
+    margin-left: 2rem;
+    color: var(--main-color);
+    font-weight: 500;
+}
+.header .navbar a:hover {
+    color: var(--main-color4);
+}
+
+#menu-btn {
+    font-size: 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* home */
+.home {
+    text-align: center;
+    display: block;
+    align-items: center;
+}
+.home .main-section{
+    margin: 8rem 0;
+
+}
+.home .main-section .content h1 {
+    font-size: 4rem;
+    font-family: 'satoshi';
+    color: var(--main-color);
+}
+.home .main-section .content p {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+.home .main-section .content .button {
+    margin-top: 2rem;
+}
+.home .videos video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* benefits */
+.benefits {
+    margin: 5rem 0;
+}
+.benefits .row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.benefits .row .col {
+    position: relative;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    /* margin: 0 2rem; */
+    padding: 1rem;
+}
+.benefits .row .col .image img {
+    width: 100%;
+}
+.benefits .row .col h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+.benefits .row .col p {
+    font-size: 1.2rem;
+}
+
+/* animation */
+.benefits .row .col:hover {
+    box-shadow: var(--box-shadow2);
+    border-radius: 15px;
+}
+
+/* benefits videos */
+.video-benefits {
+    margin: 2rem 0;
+}
+.video-benefits .container .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    position: relative;
+    padding: 3rem 0;
+}
+.video-benefits .container .row .benefits-videos {
+    flex: 40%;
+}
+.video-benefits .container .row .benefits-videos video{
+    width: 100%;
+    border: 2px solid var(--main-color5);
+    border-radius: 15px;
+}
+.video-benefits .container .row .benefits-content {
+    flex: 50%;
+}
+.video-benefits .container .benefits-content .tag {
+    background: rgba(76, 175, 80, 0.3);
+    padding: .5rem 20px;
+    display: inline-block;
+    border-radius: 25px;
+    align-items: center;
+    display: inline-flex;
+}
+.video-benefits .container .benefits-content .tag img {
+    padding-right: .3rem;
+}
+.video-benefits .container .benefits-content .tag p {
+    color: var(--main-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.video-benefits .container .benefits-content h2 {
+    font-size: 3rem;
+    font-family: 'satoshi';
+    margin: 1rem 0;
+}
+.video-benefits .container .benefits-content p {
+    font-size: 1.2rem;
+}
+
+/* features */
+.features .features-head {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.features .features-head .tag {
+    background: rgba(76, 175, 80, 0.3);
+    padding: .5rem 20px;
+    display: inline-block;
+    border-radius: 25px;
+    align-items: center;
+    display: inline-flex;
+}
+.features .features-head .tag img {
+    padding-right: .3rem;
+}
+.features .features-head .tag p {
+    color: var(--main-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.features .features-head h2 {
+    font-size: 3rem;
+    font-family: 'satoshi';
+    margin: 1rem 0;
+}
+.features .features-head p{
+    font-size: 1.2rem;
+}
+.features .features-grid .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.features .features-grid .container .box {
+    text-align: center;
+    flex: 1 1 300px;
+    padding: 2rem;
+    margin: 1rem;
+    position: relative;
+    background: var(--bg-color2);
+    border-radius: 15px;
+}
+.features .features-grid .container .box .icon {
+    padding: 1rem;
+    /* border-radius: 50%; */
+    /* background: var(--main-color3); */
+    display: inline-block;
+}
+.features .features-grid .container .box .icon i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.features .features-grid .container .box h4 {
+    font-size: 1.2rem;
+    font-family: 'satoshi';
+    margin: 1rem 0;
+}
+.features .features-grid .container .box p {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+/* animation */
+.features .features-grid .container .box:hover {
+    box-shadow: var(--box-shadow2);
+}
+
+/* capture */
+.capture {
+    margin: 5rem 0;
+}
+.capture .capture-box {
+    padding-top: 3rem;
+    background: var(--bg-color2);
+    text-align: center;
+    border-radius: 25px;
+}
+.capture .capture-box .capture-head {
+    padding: 10px;
+}
+.capture .capture-box .capture-head .capture-content h2 {
+    font-size: 3rem;
+    font-family: 'satoshi';
+    margin: 1rem 0;
+}
+.capture .capture-box .capture-head .capture-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+.capture .capture-box .capture-image {
+    margin-top: 2rem;
+}
+.capture .capture-box .capture-image img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* price */
+.price {
+    margin: 5rem 0;
+}
+.price .price-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    grid-template-areas: 
+    "title cards"
+    "safety cards"
+    ;
+    align-items: center;
+}
+.price .price-grid .price-title {
+    grid-area: title;
+}
+.price .price-grid .price-title h2 {
+    font-size: 3rem;
+    font-family: 'satoshi';
+}
+.price .price-grid .price-safety {
+    grid-area: safety;
+    display: flex;
+    padding: .5rem;
+    align-items: center;
+}
+.price .price-grid .price-safety .icon {
+    padding: 1rem 1.2rem;
+    background: var(--bg-color2);
+    color: var(--safety-color);
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+.price .price-grid .price-safety p {
+    font-size: .8rem;
+}
+.price .price-grid .price-card {
+    grid-area: cards;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 3rem;
+}
+.price .price-grid .price-card .price-box {
+    border: 2px solid var(--main-color);
+    min-height: 100%;
+    display: grid;
+    flex-direction: column;
+    border-radius: 15px;
+    background: var(--main-color3);
+    height: 100%;
+}
+.price .price-grid .price-card .box1 {
+    border: none;
+    color: var(--main-color2);
+}
+.price .price-grid .price-card .price-box .price-head {
+    padding: 2rem;
+    background: var(--main-color3);
+    border-radius: 15px;
+}
+.price .price-grid .price-card .price-box .head2 {
+    background: var(--main-color5);
+    border-radius: 15px 15px 0 0;
+}
+.price .price-grid .price-card .price-box .price-head div {
+    display: flex;
+    justify-content: space-between;
+}
+.price .price-grid .price-card .price-box .price-head div h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.price .price-grid .price-card .price-box .price-main {
+    padding: 2rem;
+    background: var(--main-color4);
+    border-radius: 0 0 15px 15px;
+    font-weight: 600;
+}
+.price .price-grid .price-card .price-box .price-main ul li{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+.price .price-grid .price-card .price-box .price-main ul li i {
+    padding-right: .5rem;
+}
+.price .price-grid .price-card .price-box .main2 {
+    background: var(--bg-color2);
+    border-radius: 0 0 15px 15px;
+}
+.price .price-grid .price-card .price-box .price-main .btn2,
+.price .price-grid .price-card .price-box .price-main .btn3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    border: none;
+}
+
+/* faq */
+.faq .row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 2px solid var(--main-color5);
+
+}
+.faq .row .col {
+    flex: 1 1 300px;
+    padding: 2rem 0;
+    margin: 1rem;
+    position: relative;
+    border-radius: 15px;
+}
+.faq .row .col h3 {
+    font-size: 1.5rem;
+    font-family: 'satoshi';
+    line-height: 1.8;
+}
+.faq .row .col p {
+    font-size: 1rem;
+}
+
+/* subscribe */
+.subscribe {
+    margin: 5rem 0;
+}
+.subscribe .box {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--main-color5);
+    padding: 3rem;
+    border-radius: 15px;
+}
+.subscribe .box h2 {
+    font-size: 3rem;
+}
+.subscribe .box p {
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.subscribe .box .box-subscribe {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.subscribe .box .box-subscribe input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 260px;
+}
+.subscribe .box .box-subscribe input::placeholder {
+    align-items: center;
+    font-size: 1rem;
+}
+.subscribe .box .box-subscribe .btn-subscribe {
+    margin-left: 1rem;
+    background: var(--main-color3);
+    padding: 10px 20px;
+    display: inline-block;
+    color: var(--main-color2);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--main-color3);
+    cursor: pointer;
+}
+.subscribe .box #p {
+    font-size: .8rem;
+}
+
+/* footer */
+.footer {
+    padding: 0 5%;
+    
+}
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding-top: 2rem;
+    border-top: 2px solid var(--main-color5);
+}
+.footer .container .box {
+    flex: 1 1 10rem;
+}
+.footer .container .box h3 {
+    font-size: 1.3rem;
+}
+.footer .container .box p {
+    line-height: 1.8;
+} 
+.footer .container .box a {
+    display: block;
+    padding: .5rem 0;
+    font: 1.5rem;
+}
+.footer .container .box a:hover {
+    color: var(--main-color4);
+}
+.footer .container .box .mail {
+    font-size: 1.2rem;
+}
+.footer .copyright p {
+    font-size: 1rem;
+    padding: 1rem 0;
+    border-top: 2px solid var(--main-color5);
+    align-items: center;
+}
+
+
+/* media query */
+@media (max-width: 1150px) {
+    html {
+        font-size: 70%;
+    }
+
+    /* beneftis */
+    .video-benefits .container .row {
+        flex-direction: column-reverse;
+    }
+    .video-benefits .container .row:nth-child(2) {
+        flex-direction: column;
+    }
+    .video-benefits .container .row .benefits-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* price grid */
+    .price .price-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        grid-template-areas: 
+        "title title"
+        "cards cards"
+        "safety safety"
+        ;
+    }
+    .price .price-grid .price-title {
+        grid-area: title;
+        text-align: center;
+    }
+
+} 
+@media (max-width: 768px) {
+    html {
+        font-size: 68%;
+    }
+    /* navbar */
+    #menu-btn {
+        display:initial;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px solid rgba(0,0,0, .1);
+        background: #ffff;
+        border-bottom: 1px solid rgba(0,0,0, .1);
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a {
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+    }
+    
+
+    /* button */
+    .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .btn2 {
+        width: 100%;
+    }
+    .btn3 {
+        width: 100%;
+    }
+
+    /* features */
+    .features .features-grid .container {
+        display: block;
+    }
+
+    /* price grid */
+    .price .price-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        grid-template-areas: 
+        "title title"
+        "cards cards"
+        "safety safety"
+        ;
+    }
+    .price .price-grid .price-card {
+        grid-template-columns: 1fr;
+    }
+
+    /* subscribe */
+    .subscribe .box .box-subscribe {
+        display: block;
+    }
+    .subscribe .box .box-subscribe input,
+    .subscribe .box .box-subscribe .btn-subscribe {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
